@@ -1,0 +1,22 @@
+["protostar.config"]
+protostar_version = "0.4.2"
+
+["protostar.project"]
+libs_path = "lib"
+
+["protostar.build"]
+cairo-path = ["./lib/cairo_contracts/src"]
+
+["protostar.contracts"]
+ERC721 = [
+    "src/contracts/ERC721.cairo",
+]
+ERC721_custom = [
+    "src/contracts/ERC721Custom.cairo",
+]
+ERC721_original = [
+    "lib/cairo_contracts/src/openzeppelin/token/erc721/presets/ERC721MintableBurnable.cairo",
+]
+
+[profile.testnet.protostar.deploy]
+network="alpha-goerli"
